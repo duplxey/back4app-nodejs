@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="card mb-2">
+        <div class="card-body">
+            <h5 class="card-title">Create a task</h5>
+            <form action="/create" method="post">
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Name*</label>
+                    <input type="text" class="form-control" id="nameInput" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="descriptionInput" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="descriptionInput" name="description">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="isDoneInput" name="isDone">
+                    <label class="form-check-label" for="isDoneInput">Is done?</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+    <a href="/">← Go back</a>
+{% endblock %}

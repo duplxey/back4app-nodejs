@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="row">
+        {% for task in tasks %}
+            <div class="col-12 col-md-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ task.name }}</h5>
+                        <p class="card-text">
+                            <strong>description: </strong>{{ task.description }}<br>
+                            <strong>isDone: </strong>{% if task.isDone %}✔{% else %}❌{% endif %}<br>
+                        </p>
+                        <a class="btn btn-primary" href="/{{ task.objectId }}">View</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="/create">+ Create task</a>
+{% endblock %}

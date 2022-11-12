@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="card mb-2">
+        <div class="card-body">
+            <h5 class="card-title">{{ task.name }}</h5>
+            <p class="card-text">
+                <strong>description: </strong>{{ task.description }}<br>
+                <strong>isDone: </strong>{% if task.isDone %}✔{% else %}❌{% endif %}<br>
+            </p>
+            <a class="btn btn-primary" href="/{{ task.objectId }}/toggle">Toggle done</a>
+            <a class="btn btn-danger" href="/{{ task.objectId }}/delete">Delete</a>
+        </div>
+    </div>
+    <a href="/">← Go back</a>
+{% endblock %}
