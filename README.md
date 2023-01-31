@@ -1,4 +1,4 @@
-# nodejs-back4app
+# back4app-nodejs
 
 A simple TODO web application written in [Node.js](https://nodejs.org/en/) built for deployment to [Back4app](https://www.back4app.com/).
 
